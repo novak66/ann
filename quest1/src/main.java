@@ -63,8 +63,8 @@ public class main {
     }
 
     public static void main(String args[]) {
-        Double a = 1.8917;
-        Double b = 5.2471;
+        Double a = 0.138996;
+        Double b = 1.073624;
         Double c = 0.00000;
         Double t = 0.00000;
 
@@ -72,15 +72,20 @@ public class main {
             c = ((a + b) / 2);
             t = ((b - a) / 2);
 
-            Double funcC = functionQuest10(c);
-            Double funcT = functionQuest10(t);
+            Double funcC = functionQuest6(c);
+            Double funcT = functionQuest6(t);
+
+            if(Math.abs(funcC) < 0.000000000433163) {
+                System.out.println(i +1);
+                break;
+            }
 
 
-            Double funcA = functionQuest10(a);
+            Double funcA = functionQuest6(a);
 
-            Double funcB = functionQuest7(b);
+            Double funcB = functionQuest6(b);
 
-            System.out.printf("%d, %.15f \n ", (i +1) , c);
+           // System.out.printf("%d, %.15f \n ", (i +1) , c);
 
 
             if (Math.signum(funcA) == Math.signum(funcC)) {
